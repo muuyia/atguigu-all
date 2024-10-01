@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //普通函数
+        function fun1(){
+            console.log("fun1 invoked")
+        }
+
+        console.log("code1 invoked")
+
+        fun1();
+        console.log("code2 invoked")
+
+        //setTimeout(回调函数，2000)
+        function fun2(){
+            setTimeout(function(){
+                console.log("fun2 invoked 回调函数内容")
+            },2000)
+        }
+
+        /*
+            回调函数是一种基于事件的，自动调用函数
+            回调函数其他的代码不会等待回调函数执行完毕
+        */
+         
+        fun2()
+
+        console.log("回调函数调用后代码")
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

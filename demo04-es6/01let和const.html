@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- https://www.bilibili.com/video/BV1UN411x7xe?p=122&vd_source=14551025f000a7403c153e5a0e5f8140 -->
+    <script>
+        //let不能重复声明
+
+        var i = 10
+        var i = ""
+
+        let j = 10
+        let j = "zhangsan"
+        //let有块级作用域，非函数的花括号遇见let会有块级作用域，也就是只能在花括号里面访问
+
+        //let不会预解析进行变量提升
+
+        //let定义的全局变量不会作为window的属性
+
+        //let在es6中推荐优先使用
+
+        //const 就是不可修改的let  final修饰的变量
+
+        const b = 10 
+        const PI = 3.14
+        const teachers = ["张老师","王老师","李老师"]
+        teachers.push("陈老师")
+
+        /* 模板字符串    字符串换行和字符串拼接问题*/
+        //双引或单引  处理字符串不支持多行
+
+        let city = '北京'
+        let info = `<ul>
+                        <li></li>
+                        <li></li>
+                        <li>${city}</li>
+                        <li></li>
+                        <li></li>
+                    </ul>`
+
+
+    </script>
+</head>
+<body>
+    <p></p>
+    <!-- ul>li*5 -->
+     <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ul>
+</body>
+</html>
+

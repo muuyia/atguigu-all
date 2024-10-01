@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let arr = [1,2,3]
+        let person = {name:"张三"}
+        //浅拷贝
+        let arr2 = arr
+        arr[0]=100
+        console.log(arr2)
+
+        let person2 = person
+        person.name="小黑"
+
+        //深拷贝
+        let arr3 = [...arr]
+        arr[0]=100
+        console.log(arr3)
+
+        let person3 = {...person}
+        let person4 = JSON.parse(JSON.stringify(person))
+        person.name="小黑"
+        console.log(person3)
+        console.log(person4)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

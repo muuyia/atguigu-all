@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let fun1 = function(){}   //普通函数
+        let fun2 = ()=>{}           //箭头函数生命
+        let fun3 = (x) => { return x+1 }        
+        let fun4 = x => {return x+1} 
+        let fun5 = x => console.log(x)
+        let fun6 = x => x+1         //只有一行代码
+
+        let person = {
+            name:'张三',
+            showName:function(){
+                console.log(this.name)
+            },
+            viewName:() => {
+                console.log(this.name)
+            }
+        }
+
+        person.showName()
+        person.viewName()       //箭头函数没有自己的this，箭头函数中的this是外层上下环境中的this
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

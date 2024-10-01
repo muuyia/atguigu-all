@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person{
+            #n;   //# 代表私有属性
+            age;
+            get name(){
+                return this.#n
+            }
+            set name (n){
+                this.#n = n
+            }
+
+            eat(food){
+                console.log(`${this.age}岁的${this.#n}正在吃${food}`)
+            }
+
+            static sum(a,b){
+                return a+b
+            }
+
+            constructor(name,age){
+                this.#n = name
+                this.age = age
+            }
+        }
+
+        class Student extends Person{
+            socre
+            study(){
+                console.log(`${this.age}岁的${this.name}正在努力学习,考试获得了${this.score}分`)
+            }
+
+            constructor(name,age,score){
+                super(name,age)
+                this.score = score
+            }
+        }
+
+        let person = new Person("晓明",8)
+        // person.name = "张三"
+        person.age = 10
+        console.log(person)
+        person.eat("火锅")
+
+
+        let stu = new Student("小黑",8,100)
+        stu.study()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
